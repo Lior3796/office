@@ -1,0 +1,44 @@
+.imagesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: auto;
+    width: 50vw;
+    height: 546px;
+    overflow-x: hidden;
+    position: relative;
+
+}
+img {
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+}
+img:hover{
+    animation: slider 3s ease-in-out 1s infinite forwards;
+}
+button {
+   background: none;
+   border: none
+}
+#buttonLeft, .fas fa-angle-left{
+    border: 5px black solid;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    font-size: xxx-large;
+    color: white;
+}
+#buttonRight, .fas fa-angle-right{
+    border: 5px black solid;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    font-size: xxx-large;
+    color: white;
+    background: none;
+
+}
+
+

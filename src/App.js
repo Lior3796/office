@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { employeesHeaders, OfficeProvider, EmployeesProvider, EmployeesContext, OfficeContext, SetEmployeesContext } from './Context';
+import Header from './Components/Features/Header/Header';
+import Footer from './Components/Features/Footer/Footer';
+
+import { useContext, useState } from 'react';
 
 function App() {
+const EmployeesArray = SetEmployeesContext();
+const [Employees, setEmployees] = useState(EmployeesArray);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <OfficeProvider value={Employees}>
+      <div className="App">
+        <Header/>
+        <Footer/>
+        
+      </div>
+    </OfficeProvider>
   );
 }
 

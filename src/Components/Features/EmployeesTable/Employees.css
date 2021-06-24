@@ -1,0 +1,6 @@
+#visiableRowDetails {
+    visibility: hidden;
+}
+#visiableRowDetails:hover {
+    visibility: visible;
+}
